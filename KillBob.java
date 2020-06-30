@@ -1,11 +1,11 @@
 //Kyle Kumar
 //KillBob.java
-//Period 6
 import javax.swing.*; import java.awt.*; import java.awt.event.*;
 import java.util.Timer; import java.util.TimerTask;
+
 public class KillBob extends JFrame implements ActionListener
 {
-	boolean immortal;//make the player immortal for testing purposes
+	boolean immortal;//set this to true to make the player immortal (for testing purposes)
 	JButton done,done2,prefs,done3,toStart,select;
 	int  enemySpeed, bobSpeed,charHealth;
 	int[] buttonx,buttony,sdeltax,sdeltay;
@@ -44,7 +44,7 @@ public class KillBob extends JFrame implements ActionListener
 	{
 		KillBob kb = new KillBob();//runs the program by calling the constructor
 	}
-	public KillBob()//makes the frame and sets up variables
+	public KillBob()//makes the JFrame and sets up variables
 	{
 		super("Game Project");
 		setDefaultCloseOperation(DISPOSE_ON_CLOSE);
@@ -109,11 +109,11 @@ public class KillBob extends JFrame implements ActionListener
 		shopb = new ImageIcon("images/ShopButton.png").getImage();
 		fshotAir = new boolean[4];
 		fshotx = new double[4];
-		fshoty = new double[4];//39X99
+		fshoty = new double[4];
 		charx = 400;
 		chary = 620;//sets the initial position of the char
 		projx = new double[5];
-		projy = new double[5];//sets up an array to cap the character's bullets on screen to 5
+		projy = new double[5];//sets up an array to limit the character's bullets on screen to 5
 		bonusShotx=new double[5][2];
 		bonusShoty=new double[5][2];
 		bonusAir = new boolean[5][2];
@@ -125,7 +125,7 @@ public class KillBob extends JFrame implements ActionListener
 		enemyy = new double[4];
 		enemyxAdd=new double[4];
 		enemyyAdd = new double[4];
-		fireAtWill = new boolean[4];//386
+		fireAtWill = new boolean[4];
 		enemyProjx = new double[4];
 		enemyProjy=new double[4];
 		enemyProjyAdd = new double[4];
@@ -209,7 +209,7 @@ public class KillBob extends JFrame implements ActionListener
 		setVisible(true);//makes the main panel visible
 		span.requestFocus();
 	}
-	public void setStuffUp()//defines all of the frames based on the selected character
+	public void setStuffUp()//defines all of the sprites for the selected character
 	{
 		wizard1 = new ImageIcon("images/"+selection+"1.png").getImage();
 		wizard2 = new ImageIcon("images/"+selection+"2.png").getImage();
